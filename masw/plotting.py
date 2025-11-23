@@ -50,7 +50,7 @@ def plot_dispersion(
 ) -> None:
     X, Y = np.meshgrid(frequencies, velocities)
     fig, ax = plt.subplots(figsize=(8, 6))
-    pcm = ax.pcolormesh(X, Y, energy, cmap="coolwarm", shading="auto", rasterized=True)
+    pcm = ax.pcolormesh(X, Y, energy.T, cmap="coolwarm", shading="auto", rasterized=True)
     fig.colorbar(pcm, ax=ax, label="Normalized energy")
 
     ax.set_ylim(velocities.min(), velocities.max())
