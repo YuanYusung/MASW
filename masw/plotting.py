@@ -30,7 +30,8 @@ def plot_wavefield(
     ax.plot(t_line, [ymin, ymax], "k--", lw=1.2)
     ax.annotate("3 km/s", xy=(1.5, ymin * 0.8 + ymax * 0.2), rotation=63, color="k", fontsize=18)
 
-    ax.set_xlim(times.min(), times.max())
+    # ax.set_xlim(times.min(), times.max())
+    ax.set_xlim(-2, 8)
     ax.set_ylim(ymin, ymax)
     ax.set_xlabel("Correlation time (s)", fontsize=18)
     ax.set_ylabel("Interstation distance (km)", fontsize=18)
@@ -47,14 +48,15 @@ def plot_dispersion(
     energy: np.ndarray,
     output_path: str,
 ) -> None:
-    X, Y = np.meshgrid(velocities, frequencies)
+    X, Y = np.meshgrid(frequencies, velocities)
     fig, ax = plt.subplots(figsize=(8, 6))
     pcm = ax.pcolormesh(X, Y, energy, cmap="coolwarm", shading="auto", rasterized=True)
     fig.colorbar(pcm, ax=ax, label="Normalized energy")
 
-    ax.set_xlim(velocities.min(), velocities.max())
-    ax.set_xlabel("Phase Velocity (km/s)", fontsize=18)
-    ax.set_ylabel("Frequency (Hz)", fontsize=18)
+    ax.set_ylim(velocities.min(), velocities.max())
+    ax.set_xlim(freqencies.min(), frequencies.max())
+    ax.set_xlabel("Frequency (Hz)", fontsize=18)
+    ax.set_ylabel("Phase Velocity (km/s)", fontsize=18)
     ax.tick_params(labelsize=12)
 
     fig.tight_layout()
