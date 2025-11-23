@@ -54,7 +54,7 @@ def plot_dispersion(
     fig.colorbar(pcm, ax=ax, label="Normalized energy")
 
     ax.set_ylim(velocities.min(), velocities.max())
-    ax.set_xlim(freqencies.min(), frequencies.max())
+    ax.set_xlim(frequencies.min(), frequencies.max())
     ax.set_xlabel("Frequency (Hz)", fontsize=18)
     ax.set_ylabel("Phase Velocity (km/s)", fontsize=18)
     ax.tick_params(labelsize=12)
