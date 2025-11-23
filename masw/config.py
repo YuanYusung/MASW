@@ -25,7 +25,7 @@ class MASWConfig:
     velocity_grid: np.ndarray = field(
         default_factory=lambda: np.linspace(0.2, 2.5, 231)
     )
-    freq_range: Tuple[float, float] = (0.5, 5.0)
+    freq_range: Tuple[float, float] = (0.2, 5.0)
     zero_padding_factor: int = 5
 
 
@@ -34,5 +34,5 @@ class AveragingConfig:
     velocity_grid: np.ndarray = field(
         default_factory=lambda: np.linspace(2.0, 4.5, 231)
     )
-    freq_range: Tuple[float, float] = (0.3, 4.0)
+    freq_range: Tuple[float, float] = (0.3, 3.0)
     min_distance_km: float = 0.6
