@@ -23,6 +23,12 @@ python masw.py plot
 
 The command will preprocess inputs, compute dispersion, and save the default figures `Figure1_wavefield.png` and `Figure2_masw_avg_dispersion.png`.
 
+### Example outputs
+
+![Wavefield example](Figure1_wavefield.png)
+
+![Average dispersion example](Figure2_masw_avg_dispersion.png)
+
 ## CLI usage
 Three subcommands are available:
 

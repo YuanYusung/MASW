@@ -61,6 +61,9 @@ def compute_masw(
                 station_idx, idx
             ]
         asum[idx, :] = np.abs(np.sum(accum, axis=0))
+        peak = np.max(asum[idx, :])
+        if peak > 0:
+            asum[idx, :] /= peak
         asum[idx, :] /= np.max(asum[idx, :])
 
     return config.velocity_grid, selected_freqs, asum
