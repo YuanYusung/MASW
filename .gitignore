@@ -3,5 +3,3 @@ __pycache__/
 *.pyo
 *.npz
 *.pickle
-Figure1_wavefield.png
-Figure2_masw_avg_dispersion.png
