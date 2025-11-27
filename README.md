@@ -1,6 +1,6 @@
 # MASW
 
-Obtain the array average phase velocity from seismic ambient noise cross-correlations (ANCs) using multichannel analysis of surface waves (MASW).
+Obtain the array average phase velocity from seismic ambient noise cross-correlations (ANCs) using multichannel analysis of surface waves (MASW; Park et al., 1999).
 
 ## Project layout
 - `masw/`: reusable package containing configuration models, preprocessing, MASW computation, plotting, and pipeline helpers.
@@ -70,3 +70,7 @@ velocities, freqs, energy = run_pipeline()
 ```
 
 Adjust the configuration objects to match new datasets (e.g., data directory, bandpass, velocity grid) without editing the internal code.
+
+## References
+
+Park, C. B., Miller, R. D., & Xia, J. (1999). Multichannel analysis of surface waves. Geophysics, 64(3), 800–808. https://doi.org/10.1190/1.1444590
